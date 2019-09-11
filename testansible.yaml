@@ -1,16 +1,16 @@
 ---
-- hosts : test-servers
-  become: true
-  tasks :
-   - name : install nginx
-     package : pkg=nginx state=installed
+  - hosts : cp-platformtst6
+    become: true
+    tasks :
+    - name : install nginx
+      package : pkg=nginx state=installed
      
-     notify:
+      notify:
       - start nginx
-   - name : message 
-     command : echo "installed nginx!"
-  handlers :
-   - name : start nginx
-     service : name=nginx state=started
+    - name : message 
+      command : echo "installed nginx!"
+    handlers :
+    - name : start nginx
+      service : name=nginx state=started
 
 
