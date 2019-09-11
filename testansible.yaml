@@ -7,7 +7,8 @@
      
      notify:
       - start nginx
-
+   - name : message 
+     command : echo "installed nginx!"
   handlers :
    - name : start nginx
      service : name=nginx state=started
