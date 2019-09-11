@@ -1,4 +1,4 @@
-[testservers]
+[localhost]
 
 cp-platformtst6 ansible_user=root ansible_host=10.26.34.253 
 #localhost           ansible_connection=local
