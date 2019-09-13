@@ -1,5 +1,5 @@
 ---
-- hosts : localhost
+- hosts : 10.26.34.253
   become: true
   tasks :
    - name : install nginx
