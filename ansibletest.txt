@@ -1,0 +1,4 @@
+
+[master]
+master1 ansible_user=root ansible_host=1.2.3.4
+master2 ansible_user=root ansible_host= 1.23.3.4
