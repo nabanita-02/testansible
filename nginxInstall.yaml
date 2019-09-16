@@ -11,3 +11,16 @@
   handlers :
    - name : start nginx
      service : name=nginx state=started
+
+- hosts : worker
+  become: true
+  tasks :
+   - name : install nginx
+     package : pkg=nginx state=installed
+
+     notify:
+      - start nginx
+
+  handlers :
+   - name : start nginx
+     service : name=nginx state=started
